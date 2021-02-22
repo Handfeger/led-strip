@@ -30,4 +30,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(Z_DUMMY_TARGET ${SRC_LIST} include/secrets.h src/wifi.cpp)
+add_executable(Z_DUMMY_TARGET ${SRC_LIST} include/secrets.h src/wifi.cpp src/wifi.h src/led_functions.cpp src/led_functions.h)

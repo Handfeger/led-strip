@@ -1,6 +1,6 @@
 #include <FastLED.h>
 #include <SPI.h>
-#include <wifi.cpp>
+#include <wifi.h>
 
 // TODO mqtt
 
@@ -70,11 +70,11 @@ void little_light() {
     FastLED.show();
 }
 
-[[noreturn]] void setup() {
+void setup() {
     Serial.begin(9600);
     while (!Serial) {}
 
-    connect_wifi();
+    establish_wifi();
 
 
     // put your setup code here, to run once:
@@ -96,7 +96,7 @@ void test1() {
     do_n_full(19,4);
     delay(DELAY);
     reset();
-    do_n_full(20,5);
+    do_n_full(19,5);
     delay(DELAY);
     reset();
 }
